@@ -53,12 +53,57 @@ here is some screanshots
 
 
 
-
-
-
 __CaseStatement__
+
 let's dive into the CaseStament :
-I followed this grammar 
+I followed this grammar :
+
+<case statement> ::= case <expression> of <case list element> {; <case list element> } end
+<case list element> ::= <case label list> : <statement> | <empty>
+<case label list> ::= <constant> {, <constant> }
+<empty>::=
+
+in pascale a  case can be empty exemple: 
+  VAR		j, a :	INTEGER.
+        j := 2;
+        a := 1;
+        BEGIN
+            CASE j OF
+                100: a := 5;
+                **2: ; (* cas vide *)**
+                30: a := 7;
+                ELSE:
+               j := j*2
+            END
+        END.
+
+-This is why we first do a function that detetct this empty case if there is a ';' after : of the case.
+
+There is two version of case statement the first is without else and the second if with the else part.
+vs without else :
+the function void CaseLabelList(unsigned long long tag)
+- first we check if the current is a constante (NUMBER or ID) because there is two types of switch cases
+  
+case x of
+  1: // instruction pour le cas où x vaut 1
+  2: // instruction pour le cas où x vaut 2
+end;
+
+
+const
+  RED = 1;
+  GREEN = 2;
+  BLUE = 3;
+case color of
+  RED: // instruction pour le cas où color vaut RED (1)
+  GREEN: // instruction pour le cas où color vaut GREEN (2)
+  BLUE: // instruction pour le cas où color vaut BLUE (3)
+end;
+
+  
+The %rax register should contain the value of the expression being tested in the case statement. This value is computed by the Expression() function, which should leave its result in %rax.
+
+
 
 
 
