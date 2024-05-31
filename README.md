@@ -64,7 +64,7 @@ I followed this grammar :
 <empty>::=
 
 in pascale a  case can be empty exemple: 
-'''
+```
   VAR		j, a :	INTEGER.
         j := 2;
         a := 1;
@@ -77,14 +77,14 @@ in pascale a  case can be empty exemple:
                j := j*2
             END
         END.
-'''
+```
 -This is why we first do a function that detetct this empty case if there is a ';' after : of the case.
 
 There is two version of case statement the first is without else and the second if with the else part.
 vs without else :
 the function void CaseLabelList(unsigned long long tag)
 - first we check if the current is a constante (NUMBER or ID) because there is two types of switch cases
- ''' 
+``` 
 case x of
   1: // instruction pour le cas où x vaut 1
   2: // instruction pour le cas où x vaut 2
@@ -101,7 +101,7 @@ case color of
   BLUE: // instruction pour le cas où color vaut BLUE (3)
 end;
 
-  '''
+```
 The %rax register should contain the value of the expression being tested in the case statement. This value is computed by the Expression() function, which should leave its result in %rax.
 
 
