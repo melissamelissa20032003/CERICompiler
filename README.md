@@ -53,7 +53,10 @@ here is some screanshots
 
 if we try to emplimeNt it with nested for loop or even while loop it works 
 
-here is the for screenshots 
+here is the for screenshots for a nested for loop 
+![Screenshot from 2024-05-31 20-42-58](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/8747a68e-7ca7-4975-98fe-17a18a1ae071)
+
+assembly code : 
 ![Screenshot from 2024-05-31 20-28-08](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/36082bc6-2b33-440a-88ed-02a7bad8cd51)
 
 ![Screenshot from 2024-05-31 20-28-36](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/381b4f32-e3f8-4c1e-bc99-0db3a08e29ea)
