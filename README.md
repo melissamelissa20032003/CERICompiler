@@ -107,6 +107,96 @@ The %rax register should contain the value of the expression being tested in the
 
 
 
+*CaseStatement*
+I used thi grammar : 
+<case statement> ::= case <expression> of <case list element> {; <case list element> } end
+<case list element> ::= <case label list> : <statement> | <empty>
+<case label list> ::= <constant> {, <constant> }
+<empty>::=
+
+some utility functions that I have used :
+
+```
+bool Empty() {
+    return current == SEMICOLON;
+}
+
+TOKEN lexer_advance() {
+    return (TOKEN)lexer->yylex();
+}
+
+//libise the case statment 
+string GenerateTag(string label) {
+    return label + to_string(TagNumber++);
+}
+
+```
+<empty>::= : in the Case Statement there is somtimes an empty case that we distinguish if we find ';' right after ':'
+
+//<case label list> ::= <constant> {, <constant> }
+- I considered a constante every NUMBER or ID that we find after the 'OF' witch markes the case
+- there is two types of switch cases in pascal :
+- exemple :
+1- Constantes Numériques (NUMBER) :
+case x of
+  1: // instruction pour le cas où x vaut 1
+  2: // instruction pour le cas où x vaut 2
+end;
+
+2-Constantes Identifier (IDENTIFIER) :
+const
+  RED = 1;
+  GREEN = 2;
+  BLUE = 3;
+case color of
+  RED: // instruction pour le cas où color vaut RED (1)
+  GREEN: // instruction pour le cas où color vaut GREEN (2)
+  BLUE: // instruction pour le cas où color vaut BLUE (3)
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+here is screenshot for the implementation 
+
+![Screenshot from 2024-05-31 06-05-28](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/08fd36f7-c2ef-4504-8c66-1ffa1930e991)
+![Screenshot from 2024-05-31 06-04-53](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/914e72c1-1b31-4196-afeb-c8fded0b3f14)
+
+
+
+
 
 
 
