@@ -1,6 +1,55 @@
 # CERICompiler
 C++ program that compiles Pascal code and produces AT&T (processor x86 ) , which is a variant of the assembly code using recursive descent analysis. It can compile arithmetic expressions with basic conditional statements such as for, while, if, case, etc.
 
+
+Download the repository :
+
+git clone https://github.com/melissamelissa20032003/CERICompiler.git
+
+Build the compiler and test it :
+
+make test
+
+Have a look at the output :
+
+gedit test.s
+
+Debug the executable :
+
+ddd ./test
+
+Commit the new version :
+
+git commit -a -m "What's new..."
+
+Send to your framagit :
+
+git push -u origin master
+
+Get from your framagit :
+
+git pull -u origin master
+
+This version Can handle :
+
+ ForStatement := "For" ID ":=" Expression ("TO"|"DOWNTO") Expression "DO" Statement
+
+<case statement> ::= case <expression> of <case list element> {; <case list element> } end
+<case list element> ::= <case label list> : <statement> | <empty>
+<case label list> ::= <constant> {, <constant> }
+<empty>::=
+
+
+
+
+
+
+
+
+
+
+
+
 **ForStatement**
 
 -First, I declared a variable that will count the nested loops.
@@ -217,7 +266,6 @@ here is screenshots for the implementation
 
 code to test 
 ```
-
 VAR		j, a :	INTEGER.
           j := 2;
           a := 1;
