@@ -133,7 +133,7 @@ The %rax register should contain the value of the expression being tested in the
 
 
 *CaseStatement*
-I used thi grammar : 
+I used this grammar : 
 <case statement> ::= case <expression> of <case list element> {; <case list element> } end
 <case list element> ::= <case label list> : <statement> | <empty>
 <case label list> ::= <constant> {, <constant> }
