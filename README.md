@@ -156,67 +156,30 @@ case color of
   BLUE: // instruction pour le cas où color vaut BLUE (3)
 end;
 ```
-the %rax register contains the result of Expression() witch is the vlue of the variable between 'CASE' and 'OF'
-that we will compare with the cases that we will find in our CaseStatement()
-while comparing the two values we produce a label of the correspending case and according to the result we jump to the right instruction
-if we find a comma we are facing an other possibility in our case so we move on and performe the same thing until we find a COLON that means the current will be the instruction so we print the label of the case and we check if the case is empty (we move to  an other case ) or we call Statement() , and we jump to the endCase.
-during the execussion of this function if we find that ',' or ':' is missing we return a message error .
-
+the %rax register contains the result of Expression() which is the value of the variable between 'CASE' and 'OF' that we will compare with the cases that we will find in our CaseStatement(). While comparing the two values, we produce a label for the corresponding case, and according to the result, we jump to the right instruction. If we find a comma, we are facing another possibility in our case, so we move on and perform the same thing until we find a COLON. That means the current will be the instruction, so we print the label of the case and check if the case is empty (we move to another case) or we call Statement(), and we jump to the endCase. During the execution of this function, if we find that ',' or ':' is missing, we return an error message.
 
 //<case list element> ::= <case label list> : <statement> | <empty>
-void CaseListElement(unsigned long long tag).
-according to the statement after the ':' of each case we either move on or call   CaseLabelList(tag)
-- I used tag as an argument to make sure there is a coherence between the functions that I call inside the CaseStatement() and garenty that I am dealing with the right case each time
+void CaseListElement(unsigned long long tag)
+
+According to the statement after the ':' of each case, we either move on or call CaseLabelList(tag).
+
+I used tag as an argument to make sure there is coherence between the functions that I call inside the CaseStatement() and to guarantee that I am dealing with the right case each time.
 
 //<case statement> ::= case <expression> of <case list element> {; <case list element> } end
-void CaseStatement() 
-in this function first I creat a unique tag for this case statement  
-```
+void CaseStatement()
+In this function, first, I create a unique tag for this case statement:
+
 unsigned long long tag = TagNumber++;
-```
-after checking the write syntax (no 'CASE' missing  )
-I move on and call expression (push the value that will be used for comparession )
-check if there is no 'OF' missing 
-move on and produce case labels 
-call CaseListElement(tag) if the current is not a keyword 
-if we find a semicolon we just move to the next case 
+After checking the correct syntax (no 'CASE' missing), I move on and call expression (push the value that will be used for comparison). I check if there is no 'OF' missing, move on, and produce case labels. I call CaseListElement(tag) if the current is not a keyword. If we find a semicolon, we just move to the next case.
 
+Here I included the else part:
+I check if the keyword 'ELSE' exists. I move forward while the current is not ':' and return an error message. After that, I produce an else label and call statement.
 
-here I included the else part :
-I check if the keyword 'ELSE' exists I move forward while the current is not ':' I return an error message , after that I produce a else label and call statement .
-
-I jump to the end after checking that there is no END missing 
+I jump to the end after checking that there is no END missing.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-here is screenshot for the implementation 
+here is screenshots for the implementation 
 
 
 
