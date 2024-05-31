@@ -47,9 +47,9 @@ here is some screanshots
 
 
 
-![Screenshot from 2024-05-30 20-20-20](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/7e5cd2bd-d1b0-4ad7-9b14-ecb807797a9a)
+![Screenshot from 2024-05-31 06-05-28](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/08fd36f7-c2ef-4504-8c66-1ffa1930e991)
+![Screenshot from 2024-05-31 06-04-53](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/914e72c1-1b31-4196-afeb-c8fded0b3f14)
 
-![Screenshot from 2024-05-30 20-02-15](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/d6ef06d0-f8ed-48de-969f-fe4c12420a63)
 
 
 
@@ -137,6 +137,8 @@ string GenerateTag(string label) {
 - I considered a constante every NUMBER or ID that we find after the 'OF' witch markes the case
 - there is two types of switch cases in pascal :
 - exemple :
+
+ ```
 1- Constantes Numériques (NUMBER) :
 case x of
   1: // instruction pour le cas où x vaut 1
@@ -153,7 +155,7 @@ case color of
   GREEN: // instruction pour le cas où color vaut GREEN (2)
   BLUE: // instruction pour le cas où color vaut BLUE (3)
 end;
-
+```
 
 
 
@@ -190,10 +192,6 @@ end;
 
 
 here is screenshot for the implementation 
-
-![Screenshot from 2024-05-31 06-05-28](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/08fd36f7-c2ef-4504-8c66-1ffa1930e991)
-![Screenshot from 2024-05-31 06-04-53](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/914e72c1-1b31-4196-afeb-c8fded0b3f14)
-
 
 
 
