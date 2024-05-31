@@ -156,7 +156,11 @@ case color of
   BLUE: // instruction pour le cas où color vaut BLUE (3)
 end;
 ```
-
+the %rax register contains the result of Expression() witch is the vlue of the variable between 'CASE' and 'OF'
+that we will compare with the cases that we will find in our CaseStatement()
+while comparing the two values we produce a label of the correspending case and according to the result we jump to the right instruction
+if we find a comma we are facing an other possibility in our case so we move on and performe the same thing until we find a COLON that means the current will be the instruction so we print the label of the case and we check if the case is empty (we move to  an other case ) or we call Statement() , and we jump to the endCase.
+during the execussion of this function if we find that ',' or ':' is missing we return a message error .
 
 
 
