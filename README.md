@@ -142,15 +142,17 @@ I used thi grammar :
 some utility functions that I have used :
 
 ```
+// to check the empty case 
 bool Empty() {
     return current == SEMICOLON;
 }
 
+// the move forward the lecture 
 TOKEN lexer_advance() {
     return (TOKEN)lexer->yylex();
 }
 
-//libise the case statment 
+//liblise the case statment 
 string GenerateTag(string label) {
     return label + to_string(TagNumber++);
 }
