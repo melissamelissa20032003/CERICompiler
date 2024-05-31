@@ -163,8 +163,29 @@ if we find a comma we are facing an other possibility in our case so we move on 
 during the execussion of this function if we find that ',' or ':' is missing we return a message error .
 
 
+//<case list element> ::= <case label list> : <statement> | <empty>
+void CaseListElement(unsigned long long tag).
+according to the statement after the ':' of each case we either move on or call   CaseLabelList(tag)
+- I used tag as an argument to make sure there is a coherence between the functions that I call inside the CaseStatement() and garenty that I am dealing with the right case each time
+
+//<case statement> ::= case <expression> of <case list element> {; <case list element> } end
+void CaseStatement() 
+in this function first I creat a unique tag for this case statement  
+```
+unsigned long long tag = TagNumber++;
+```
+after checking the write syntax (no 'CASE' missing  )
+I move on and call expression (push the value that will be used for comparession )
+check if there is no 'OF' missing 
+move on and produce case labels 
+call CaseListElement(tag) if the current is not a keyword 
+if we find a semicolon we just move to the next case 
 
 
+here I included the else part :
+I check if the keyword 'ELSE' exists I move forward while the current is not ':' I return an error message , after that I produce a else label and call statement .
+
+I jump to the end after checking that there is no END missing 
 
 
 
