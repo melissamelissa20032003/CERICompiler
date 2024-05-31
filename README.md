@@ -63,24 +63,19 @@ assembly code :
 
 ![Screenshot from 2024-05-31 20-29-02](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/6c9ae887-4c71-445b-bfc9-1f96649bdee0)
 
+code to test 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+VAR		i,a,j,k:	INTEGER.
+i:=2;
+a:= 0;
+k:=1;
+FOR i:=2 DOWNTO 0 DO
+   FOR j:= 0 TO 2 DO
+   WHILE k < 3 DO
+     a:=a+1;
+     k:=k+1.
+```
 
 
 __CaseStatement__
@@ -218,7 +213,22 @@ here is screenshots for the implementation
 ![Screenshot from 2024-05-31 07-14-44](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/4c858a04-1c65-4b14-8c86-a19ac024901e)
 
 
+code to test 
+```
 
+VAR		j, a :	INTEGER.
+          j := 2;
+          a := 1;
+          BEGIN
+              CASE j OF
+                  100: a := 5;
+                  2: a := 3; (* cas vide *)
+                  30: a := 7;
+                  ELSE:
+                 j := j*2
+              END
+          END.
+```
 
 
 
