@@ -51,6 +51,29 @@ here is some screanshots
 ![Screenshot from 2024-05-31 06-04-53](https://github.com/melissamelissa20032003/CERICompiler/assets/109720240/914e72c1-1b31-4196-afeb-c8fded0b3f14)
 
 
+if we try to emplimeNt it with nested for loop or even while loop it works 
+
+here is the for screenshots 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 __CaseStatement__
